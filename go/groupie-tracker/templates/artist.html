@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Artist HTML Document</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+
+</head>
+
+<body>
+
+    <a href="/" class="neon-button">Back</a><br><br>
+
+    <div class="container">
+        <div class="neon-box"><strong>{{.Artist.Name}}</strong></div><br><br>
+        <div class="image"><img src="{{.Artist.Image}}"> </div><br><br>
+        <h1 class="neon-box">CreationDate<br>{{.Artist.CreationDate}}</h1>
+        <h1 class="neon-box">FirstAlbum<br>{{.Artist.FirstAlbum}}</h1><br>
+        <h1 class="neon-box">Members</h1>
+
+        <h3>
+
+            {{range .Artist.Members}}
+            <p>
+                {{.}}
+            </p>
+            {{end}}
+
+        </h3><br>
+        <h1 class="neon-box">Locations and Dates</h1>
+        {{range $key, $value := .Relation.DatesLocations}}
+        <br>
+        <h2>{{$key}}</h2>
+        {{range $value}}
+        <h3>
+            {{.}}
+        </h3>
+        {{end}}
+        {{end}}
+
+    </div>
+
+
+</body>
+
+</html>

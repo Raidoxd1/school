@@ -1,0 +1,4 @@
+{
+    "artists": "https://groupietrackers.herokuapp.com/api/artists",
+    "relation": "https://groupietrackers.herokuapp.com/api/relation"
+}

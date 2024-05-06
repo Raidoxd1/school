@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport">
+    <style>
+        body {
+            background-color: powderblue;
+        }
+
+        h1 {
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 300%;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            font-family: 'Times New Roman', Times, serif;
+            border-collapse: collapse;
+            width: 600%;
+        }
+    </style>
+    <title>Ascii-art-web</title>
+
+</head>
+
+<body>
+    <h1>
+        <div class="welcome center">Ascii-art-web</div>
+    </h1>
+    <h2>
+        <form action="/ascii-art" method="post">
+            <textarea type="text" placeholder="type something.." name="input" rows="2" cols="50"
+                value="{{.Input}}"></textarea><br />
+            <select name="banner">
+                <option value="standard">standard</option>
+                <option value="shadow">shadow</option>
+                <option value="thinkertoy">thinkertoy</option>
+                <input type="submit" value="Run">
+        </form>
+        <div overflow:auto>
+            <pre min-width:50px max-width:500px readonly>{{.Finaltext}}</pre>
+        </div>
+    </h2>
+</body>
+
+</html>

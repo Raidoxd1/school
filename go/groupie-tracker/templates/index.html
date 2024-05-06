@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>homePage HTML Document</title>
+    <link rel="stylesheet" href="/static/stylesheets/home.css">
+
+</head>
+
+<body>
+    <br>
+    <a class="neon">Groupie-Tracker</a><br><br>
+
+    <div class="container">
+        {{range .}}
+        <div class="boxes"><a href="artist?id={{.Id}}" class="neon-button">{{.Name}}</a><br><br>
+            <a href="artist?id={{.Id}}" class="image"><img src="{{.Image}}"> </a><br><br>
+        </div>
+        {{end}}
+    </div>
+
+</body>
+
+</html>
